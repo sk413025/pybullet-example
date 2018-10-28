@@ -23,4 +23,7 @@ COPY . /example
 
 WORKDIR /example
 
-CMD ["papermill", "simple_training_example.ipynb", "out/simple_training_example.ipynb"]
+ENV LC_ALL C.UTF-8
+ENV LANG C.UTF-8
+
+CMD ["papermill", "simple_training_example.ipynb", "out_PPO.ipynb"]
