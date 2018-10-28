@@ -41,7 +41,7 @@ model.save("ppo_save")
 del model 
 
 # evaluation
-env = DummyVecEnv([lambda: BalancebotEnv(render=True)])
+env = DummyVecEnv([lambda: BalancebotEnv(render=False)])
 
 # Load the trained agent
 model = PPO2.load("ppo_save", env=env, policy=CustomPolicy)
